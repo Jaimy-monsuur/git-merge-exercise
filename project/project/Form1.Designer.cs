@@ -40,11 +40,19 @@
             this.Fruit = new System.Windows.Forms.Panel();
             this.LVFruit = new System.Windows.Forms.ListView();
             this.Vlees = new System.Windows.Forms.Panel();
+            this.vleesListView = new System.Windows.Forms.ListView();
             this.Vis = new System.Windows.Forms.Panel();
+            this.LVVis = new System.Windows.Forms.ListView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.BTNClear = new System.Windows.Forms.Button();
+
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             this.Fruit.SuspendLayout();
+            this.Vlees.SuspendLayout();
+
+            this.Vis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,24 +134,46 @@
             // 
             // Vlees
             // 
+            this.Vlees.Controls.Add(this.vleesListView);
             this.Vlees.Location = new System.Drawing.Point(12, 27);
             this.Vlees.Name = "Vlees";
             this.Vlees.Size = new System.Drawing.Size(776, 411);
             this.Vlees.TabIndex = 3;
             // 
+            // vleesListView
+            // 
+            this.vleesListView.HideSelection = false;
+            this.vleesListView.Location = new System.Drawing.Point(3, 3);
+            this.vleesListView.Name = "vleesListView";
+            this.vleesListView.Size = new System.Drawing.Size(770, 405);
+            this.vleesListView.TabIndex = 0;
+            this.vleesListView.UseCompatibleStateImageBehavior = false;
+            // 
             // Vis
             // 
+            this.Vis.Controls.Add(this.LVVis);
             this.Vis.Location = new System.Drawing.Point(12, 27);
             this.Vis.Size = new System.Drawing.Size(776, 411);
             this.Vis.Name = "Vis";
             this.Vis.TabIndex = 4;
+            // 
+            // LVVis
+            // 
+            this.LVVis.HideSelection = false;
+            this.LVVis.Location = new System.Drawing.Point(3, 3);
+            this.LVVis.Name = "LVVis";
+            this.LVVis.Size = new System.Drawing.Size(770, 405);
+            this.LVVis.TabIndex = 0;
+            this.LVVis.UseCompatibleStateImageBehavior = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::project.Properties.Resources.gouda_jong_wiel_jhqj_q2;
             this.pictureBox1.Location = new System.Drawing.Point(808, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 96);
+
+            this.pictureBox1.Size = new System.Drawing.Size(206, 96);
+
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.TabIndex = 5;
@@ -158,11 +188,27 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "lekker ";
             // 
+            // BTNClear
+            // 
+
+            this.BTNClear.BackColor = System.Drawing.Color.Chocolate;
+            this.BTNClear.Location = new System.Drawing.Point(795, 411);
+
+            this.BTNClear.Name = "BTNClear";
+            this.BTNClear.Size = new System.Drawing.Size(75, 23);
+            this.BTNClear.TabIndex = 7;
+            this.BTNClear.Text = "Clear";
+
+            this.BTNClear.UseVisualStyleBackColor = true;
+
+            this.BTNClear.Click += new System.EventHandler(this.BTNClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 450);
+            this.Controls.Add(this.BTNClear);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Vis);
@@ -175,6 +221,10 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.Fruit.ResumeLayout(false);
+
+            this.Vlees.ResumeLayout(false);
+
+            this.Vis.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -196,7 +246,16 @@
         private System.Windows.Forms.Panel Vis;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+
+        private System.Windows.Forms.ListView vleesListView;
+
+        private System.Windows.Forms.ListView LVVis;
+
         private System.Windows.Forms.ListView LVFruit;
+        private System.Windows.Forms.Button BTNClear;
+
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+
     }
 }
 
