@@ -46,10 +46,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BTNClear = new System.Windows.Forms.Button();
+
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             this.Fruit.SuspendLayout();
             this.Vlees.SuspendLayout();
+
             this.Vis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -186,12 +188,17 @@
             // 
             // BTNClear
             // 
-            this.BTNClear.Location = new System.Drawing.Point(808, 354);
+
+            this.BTNClear.BackColor = System.Drawing.Color.Chocolate;
+            this.BTNClear.Location = new System.Drawing.Point(795, 411);
+
             this.BTNClear.Name = "BTNClear";
             this.BTNClear.Size = new System.Drawing.Size(75, 23);
             this.BTNClear.TabIndex = 7;
             this.BTNClear.Text = "Clear";
+
             this.BTNClear.UseVisualStyleBackColor = true;
+
             this.BTNClear.Click += new System.EventHandler(this.BTNClear_Click);
             // 
             // Form1
@@ -212,7 +219,9 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.Fruit.ResumeLayout(false);
+
             this.Vlees.ResumeLayout(false);
+
             this.Vis.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -242,7 +251,9 @@
 
         private System.Windows.Forms.ListView LVFruit;
         private System.Windows.Forms.Button BTNClear;
+
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+
     }
 }
 

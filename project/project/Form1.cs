@@ -25,11 +25,12 @@ namespace project
             {
 
 
-            }            
+            }
             else if (panelName == "Vis")
             {
               
             }
+
             else if (panelName == "Vlees")
             {
                 Vis.Hide();
@@ -67,15 +68,15 @@ namespace project
                 }  
             }
 
+
+        }
+        private void vleesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Vlees");
         }
         private void fruitGroentenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showPanel("Fruit");
-        }
-
-        private void vleesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            showPanel("Vlees");
         }
 
         private void visToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,6 +95,13 @@ namespace project
             Vis.Hide();
             Fruit.Hide();
             Vlees.Hide();
+        }
+
+        private void BTNClear_Click(object sender, EventArgs e)
+        {
+            Vlees.Hide();
+            Fruit.Hide();
+            Vis.Hide();
         }
     }
 }
