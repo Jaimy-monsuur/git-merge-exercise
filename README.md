@@ -1,3 +1,3 @@
 git-merge-exercise
 
-A git merge exercise mad by me to help first year students with their first project
+A git merge exercise made by me to help first year students with their first project
